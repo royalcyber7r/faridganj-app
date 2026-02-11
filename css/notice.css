@@ -1,0 +1,51 @@
+/* NOTICE BAR */
+.notice-bar{
+    width:100%;
+    background:#0004ff;
+    overflow:hidden;
+}
+
+.notice-inner{
+    display:flex;
+    align-items:center;
+    max-width:100%;
+    padding:8px 12px;
+    box-sizing:border-box;
+}
+
+/* Label */
+.notice-label{
+    background:#fff;
+    color:#000;
+    padding:6px 12px;
+    border-radius:4px;
+    font-weight:600;
+    margin-right:15px;
+    white-space:nowrap;
+}
+
+/* Marquee area */
+.notice-marquee{
+    flex:1;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Moving text */
+.notice-text{
+    display:inline-block;
+    white-space:nowrap;
+    color:#fff;
+    font-size:20px;
+    animation: notice-scroll 20s linear infinite;
+}
+
+/* Animation */
+@keyframes notice-scroll{
+    from{
+        transform:translateX(100%);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}

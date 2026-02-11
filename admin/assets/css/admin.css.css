@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    margin: 0;
+    padding: 0;
+}
+
+.page-header {
+    padding: 20px 30px;
+    background: linear-gradient(90deg, #eef2ff, #f8fafc);
+}
+
+.page-header h2 {
+    margin: 0;
+    color: #1e293b;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.container {
+    padding: 25px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+
+.card-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+th {
+    background: #f1f5f9;
+}
+
+.btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-edit {
+    background: #16a34a;
+}
+
+.btn-delete {
+    background: #dc2626;
+}
+
+.btn-add {
+    background: #2563eb;
+}
+
+.btn:hover {
+    opacity: .9;
+}
+
+

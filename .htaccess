@@ -1,0 +1,8 @@
+DirectoryIndex auth/login.php
+
+RewriteEngine On
+
+# Remove .php extension from URL (optional)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

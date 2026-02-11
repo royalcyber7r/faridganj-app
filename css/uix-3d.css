@@ -1,0 +1,213 @@
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#0f1218;
+    color:#eaeaea;
+}
+
+/* TOP BAR */
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 18px;
+    background:linear-gradient(90deg,#151a22,#10131a);
+    box-shadow:0 10px 30px rgba(0,0,0,.6);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.welcome{
+    font-size:14px;
+    color:#9bdcff;
+}
+
+.user-menu{
+    position:relative;
+    cursor:pointer;
+}
+
+.user-img{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    border:2px solid #3cf6ff;
+    box-shadow:0 0 12px #3cf6ff;
+}
+
+/* USER DROPDOWN */
+.user-dropdown{
+    display:none;
+    position:absolute;
+    right:0;
+    top:55px;
+    width:220px;
+    background:rgba(20,25,35,.95);
+    backdrop-filter:blur(15px);
+    border-radius:18px;
+    box-shadow:0 25px 50px rgba(0,0,0,.8);
+    overflow:hidden;
+}
+
+/* USER INFO FIX */
+.user-info{
+    display:flex;
+    align-items:center;        /* 🔥 vertical center */
+    gap:12px;                  /* image + text spacing */
+    padding:14px 16px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.user-info img{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #ff4ecd;
+    flex-shrink:0;             /* 🔥 image shrink হবে না */
+}
+
+.user-info strong{
+    font-size:15px;
+    color:#fff;
+    white-space:nowrap;        /* 🔥 নাম ভাঙবে না */
+}
+
+
+.user-dropdown a{
+    display:block;
+    padding:12px 16px;
+    color:#ddd;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.user-dropdown a:hover{
+    background:#3cf6ff22;
+    color:#3cf6ff;
+}
+
+/* HEADER */
+.header{
+    margin:20px;
+    padding:18px;
+    text-align:center;
+    font-size:20px;
+    font-weight:600;
+    letter-spacing:1px;
+    background:linear-gradient(90deg,#3cf6ff,#ff4ecd);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* SEARCH */
+.search-box{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin:20px;
+}
+
+.search-box input{
+    width:70%;
+    max-width:420px;
+    padding:14px 18px;
+    border-radius:30px;
+    border:none;
+    background:#1a1f2a;
+    color:#fff;
+    box-shadow:inset 0 0 12px rgba(0,0,0,.7);
+}
+
+.search-box input:focus{
+    outline:none;
+    box-shadow:0 0 0 2px #3cf6ff66;
+}
+
+.search-box button{
+    padding:0 18px;
+    border:none;
+    border-radius:50%;
+    background:#3cf6ff;
+    cursor:pointer;
+    box-shadow:0 0 20px #3cf6ff;
+}
+
+/* COMMON PAGE WIDTH */
+.page-wrap{
+    width:100%;
+    max-width:1200px;   /* 🔴 এইটাই reference width */
+    margin:0 auto;
+    padding:0 20px;     /* mobile gap */
+}
+
+/* BANNER – EXACT ALIGN */
+.banner{
+    width:100%;
+    margin:20px auto;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 30px 60px rgba(0,0,0,.7);
+}
+
+.banner img{
+    width:100%;
+    height:320px;       /* 🔥 height control */
+    object-fit:revert;
+    display:block;
+}
+
+/* NOTICE */
+.notice-bar{
+    margin:20px;
+    padding:12px;
+    background:#141925;
+    border-left:4px solid #ff4ecd;
+    border-radius:14px;
+}
+
+/* ICON GRID */
+.icon-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(110px,1fr));
+    gap:20px;
+    padding:20px;
+    perspective:1200px;
+}
+
+.icon-box{
+    background:linear-gradient(160deg,#1c2230,#111520);
+    border-radius:22px;
+    text-align:center;
+    padding:18px 10px;
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.7),
+        inset 0 1px 1px rgba(255,255,255,.08);
+    transform-style:preserve-3d;
+    transition:.4s;
+}
+
+.icon-box:hover{
+    transform:translateY(-10px) rotateX(8deg);
+    box-shadow:0 25px 60px rgba(0,0,0,.9);
+}
+
+.icon-box img{
+    width:52px;
+    height:52px;
+    margin-bottom:10px;
+    filter:drop-shadow(0 8px 15px rgba(0,0,0,.6));
+}
+
+.icon-box p{
+    font-size:14px;
+    color:#dce6f2;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    .search-box input{width:100%}
+    .header{font-size:16px}
+}
